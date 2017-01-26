@@ -556,7 +556,7 @@ export default React.createClass({
       <input ref="hiddenInput" type="hidden" id={this.props.id} name={this.props.name} value={this.state.value || ''} data-formattedvalue={this.state.value ? this.state.inputValue : ''} />
       {control}
       {this.props.showClearButton && !this.props.customControl && <InputGroup.Addon
-        onClick={this.props.disabled ? null : this.clear}
+        onClick={this.props.disabled ? null : this.handleFocus}
         style={{cursor:(this.state.inputValue && !this.props.disabled) ? 'pointer' : 'not-allowed'}}>
         <div style={{opacity: (this.state.inputValue && !this.props.disabled) ? 1 : 0.5}}>
           {this.props.clearButtonElement}
